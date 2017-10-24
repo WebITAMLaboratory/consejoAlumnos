@@ -51,40 +51,12 @@
     </div><!--END InfoCircles-->
     <!--council-->
     <div class="council w3-row-padding w3-content">
-        <div class="councilRep w3-col l4 m4 s6 w3-center">
+        <div v-for="councilRep in councilReps" class="councilRep w3-col l4 m4 s6 w3-center">
             <figure class="councilImg w3-badge w3-white">
                 <img src="../assets/person-icon.png" alt="Person" class="w3-image">
             </figure>
-            <p>Nombre</p>
-            <p><i>Cargo</i></p>
-        </div>
-        <div class="councilRep w3-col l4 m4 s6 w3-center">
-            <figure class="councilImg w3-badge w3-white">
-                <img src="../assets/person-icon.png" alt="Person" class="w3-image">
-            </figure>
-            <p>Nombre</p>
-            <p><i>Cargo</i></p>
-        </div>
-        <div class="councilRep w3-col l4 m4 s6 w3-center">
-            <figure class="councilImg w3-badge w3-white">
-                <img src="../assets/person-icon.png" alt="Person" class="w3-image">
-            </figure>
-            <p>Nombre</p>
-            <p><i>Cargo</i></p>
-        </div>
-        <div class="councilRep w3-col l4 m4 s6 w3-center">
-            <figure class="councilImg w3-badge w3-white">
-                <img src="../assets/person-icon.png" alt="Person" class="w3-image">
-            </figure>
-            <p>Nombre</p>
-            <p><i>Cargo</i></p>
-        </div>
-        <div class="councilRep w3-col l4 m4 s6 w3-center">
-            <figure class="councilImg w3-badge w3-white">
-                <img src="../assets/person-icon.png" alt="Person" class="w3-image">
-            </figure>
-            <p>Nombre</p>
-            <p><i>Cargo</i></p>
+            <p>{{councilRep.nombre}}</p>
+            <p><i>{{councilRep.cargo}}</i></p>
         </div>
     </div><!--END council-->
     <!--contact-->
@@ -106,7 +78,25 @@ export default {
     return {
       nombre: 'Expande Consejo',
       mail: 'expandeconsejo@gmail.com',
-      telefono: '(+52) 1 1234 5678'
+      telefono: '(+52) 1 1234 5678',
+      councilReps: [
+        {
+            nombre: "lalo",
+            cargo: "presi"
+        },
+        {
+            nombre: "peli",
+            cargo: "pr"
+        },
+        {
+            nombre: "lasdasdo",
+            cargo: "presasdasd"
+        },
+        {
+            nombre: "laasdaslo",
+            cargo: "presasdasdi"
+        }
+      ]
     }
   },
   methods : {
